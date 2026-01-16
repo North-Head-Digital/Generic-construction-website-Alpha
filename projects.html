@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our portfolio of successful construction projects across commercial, residential, and industrial sectors">
+    <title>Our Projects - Summit Construction</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-hard-hat"></i>
+                    <span>Summit Construction</span>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="btn-nav">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1>Our Projects</h1>
+            <p>A showcase of our commitment to excellence and innovation</p>
+        </div>
+    </section>
+
+    <!-- Project Filters -->
+    <section class="project-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="industrial">Industrial</button>
+                <button class="filter-btn" data-filter="renovation">Renovation</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Gallery -->
+    <section class="projects-gallery">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="commercial">
+                    <div class="project-image">
+                        <div class="placeholder-image commercial">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="view-project" onclick="openModal(0)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Commercial</span>
+                        <h3>Metro Corporate Center</h3>
+                        <p>15-story office building featuring modern design and sustainable technology</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Downtown</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="residential">
+                    <div class="project-image">
+                        <div class="placeholder-image residential">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="view-project" onclick="openModal(1)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Residential</span>
+                        <h3>Lakeside Luxury Homes</h3>
+                        <p>Exclusive waterfront community with 24 custom-designed residences</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Riverside</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="industrial">
+                    <div class="project-image">
+                        <div class="placeholder-image industrial">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="view-project" onclick="openModal(2)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Industrial</span>
+                        <h3>Tech Valley Distribution Hub</h3>
+                        <p>250,000 sq ft state-of-the-art warehouse and logistics facility</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Industrial Park</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="commercial">
+                    <div class="project-image">
+                        <div class="placeholder-image commercial">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="view-project" onclick="openModal(3)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Commercial</span>
+                        <h3>Riverside Shopping Plaza</h3>
+                        <p>Mixed-use retail and entertainment complex with 80,000 sq ft</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> 2022</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Eastside</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-category="residential">
+                    <div class="project-image">
+                        <div class="placeholder-image residential">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="view-project" onclick="openModal(4)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Residential</span>
+                        <h3>Skyline Apartments</h3>
+                        <p>120-unit luxury apartment complex with premium amenities</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Midtown</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-category="renovation">
+                    <div class="project-image">
+                        <div class="placeholder-image renovation">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="view-project" onclick="openModal(5)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Renovation</span>
+                        <h3>Historic Bank Building Restoration</h3>
+                        <p>Complete renovation preserving 1920s architecture with modern functionality</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> 2022</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Old Town</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card" data-category="industrial">
+                    <div class="project-image">
+                        <div class="placeholder-image industrial">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="view-project" onclick="openModal(6)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Industrial</span>
+                        <h3>Advanced Manufacturing Plant</h3>
+                        <p>High-tech production facility with clean room specifications</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Tech Park</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card" data-category="commercial">
+                    <div class="project-image">
+                        <div class="placeholder-image commercial">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="view-project" onclick="openModal(7)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Commercial</span>
+                        <h3>Community Medical Center</h3>
+                        <p>45,000 sq ft healthcare facility with advanced medical technology</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Westside</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-card" data-category="residential">
+                    <div class="project-image">
+                        <div class="placeholder-image residential">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="view-project" onclick="openModal(8)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Residential</span>
+                        <h3>Mountain View Estate</h3>
+                        <p>Custom 8,500 sq ft luxury home with panoramic views</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Hilltop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image" id="modalImage"></div>
+                <div class="modal-info">
+                    <span class="modal-category" id="modalCategory"></span>
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <strong>Completion:</strong>
+                            <span id="modalYear"></span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Location:</strong>
+                            <span id="modalLocation"></span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Size:</strong>
+                            <span id="modalSize"></span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Duration:</strong>
+                            <span id="modalDuration"></span>
+                        </div>
+                    </div>
+                    <p id="modalFullDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's discuss how we can bring your vision to life</p>
+                <a href="contact.html" class="btn btn-primary btn-large">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-hard-hat"></i>
+                        <span>Summit Construction</span>
+                    </div>
+                    <p>Building excellence since 1999. Your trusted partner for all construction needs.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Commercial Construction</a></li>
+                        <li><a href="services.html">Residential Projects</a></li>
+                        <li><a href="services.html">Industrial Facilities</a></li>
+                        <li><a href="services.html">Renovations</a></li>
+                        <li><a href="services.html">Project Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Construction Ave<br>Building City, BC 12345</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@summitconstruction.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 8AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Summit Construction. All rights reserved. | Website by <a href="https://northheaddigital.com" target="_blank">North Head Digital</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
